@@ -61,5 +61,6 @@ O resultado será:
 [7, 8.5, 10, 9.4, 7.9, 9]
 `
 
+
 Nesse caso, o `filter()` percorre cada nota e verifica se ela é maior ou igual a 7. Quando a condição é verdadeira, a nota é adicionada ao novo array. Quando a condição é falsa, ela não é adicionada.
 Dessa forma, conseguimos separar somente as notas que atendem à condição que definimos.
