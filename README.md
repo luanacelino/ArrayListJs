@@ -40,5 +40,9 @@ Resultado:
 `
 
 ## filter()
-O método filter() é utilizado quando queremos selecionar determinados elementos de um array de acordo com uma condição.
+O método `filter()` é utilizado quando queremos selecionar determinados elementos de um array de acordo com uma condição. Diferentemente do `map()`, que transforma os elementos, o `filter()` verifica quais elementos atendem à condição definida e coloca esses elementos em um novo array.
 
+Por exemplo, podemos ter uma lista contendo notas:
+```javascript
+const notas = [5, 2, 3.5, 7, 8.5, 10, 9.4, 7.9, 9];
+```
