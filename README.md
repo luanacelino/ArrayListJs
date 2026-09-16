@@ -67,5 +67,97 @@ Nesse caso, o `filter()` percorre cada nota e verifica se ela é maior ou igual 
 Dessa forma, conseguimos separar somente as notas que atendem à condição que definimos.
 
 ## reduce()
+O método `reduce()` possui uma utilização um pouco diferente dos métodos anteriores. Ele é utilizado para percorrer os elementos de um array e acumular informações até chegar a um resultado final.
+Para isso, o `reduce()` utiliza um acumulador, que é responsável por armazenar o resultado durante a execução.
+O acumulador pode assumir diferentes tipos, dependendo do que queremos fazer. Ele pode ser um número, uma string, um array ou até mesmo um objeto.
+Um exemplo simples seria utilizar o `reduce()` para somar os valores de um array:
 
+```javascript
+const numeros = [1, 2, 3, 4, 5];
 
+const soma = numeros.reduce((acumulador, numero) => {
+    return acumulador + numero;
+}, 0);
+
+console.log(soma);
+```
+
+O resultado será:
+`
+15
+`
+
+Nesse exemplo, o acumulador começa com o valor 0 e, a cada elemento do array, recebe a soma do valor atual.
+
+Porém, o reduce() não serve apenas para fazer cálculos. Ele também pode ser utilizado para contar ocorrências de informações dentro de uma lista.
+
+## Contando ocorrências
+
+Imagine que temos uma lista de produtos e alguns deles possuem a mesma categoria:
+
+```javascript
+const produtos = [
+    { nome: "Notebook", categoria: "Eletrônico" },
+    { nome: "Celular", categoria: "Eletrônico" },
+    { nome: "Cadeira", categoria: "Móvel" },
+    { nome: "Mesa", categoria: "Móvel" },
+    { nome: "Fone", categoria: "Eletrônico" }
+];
+```
+
+Nesse caso, temos três produtos da categoria Eletrônico e dois da categoria Móvel.
+Podemos utilizar o reduce() para contar essas ocorrências:
+
+```javascript
+const ocorrencias = produtos.reduce((acumulador, produto) => {
+    acumulador[produto.categoria] =
+        (acumulador[produto.categoria] || 0) + 1;
+
+    return acumulador;
+}, {});
+
+console.log(ocorrencias);
+```
+
+O resultado será:
+
+`
+{
+    Eletrônico: 3,
+    Móvel: 2
+}
+`
+
+Nesse exemplo, o acumulador começa como um objeto vazio:
+
+`
+{}
+`
+A cada produto que o reduce() encontra, ele verifica qual é a categoria desse produto.
+
+A expressão:
+
+```javascript
+acumulador[produto.categoria] || 0
+```
+
+verifica se aquela categoria já possui uma quantidade registrada no acumulador. Caso ainda não exista, o valor utilizado será 0.
+
+Depois, adicionamos 1:
+
+```javascript
+(acumulador[produto.categoria] || 0) + 1
+```
+
+Dessa maneira, cada vez que uma categoria aparece, sua quantidade é aumentada.
+
+Ao final da execução, temos:
+
+```javascript
+{
+    Eletrônico: 3,
+    Móvel: 2
+}
+```
+
+Nesse exemplo, o acumulador está sendo utilizado como um objeto para armazenar a quantidade de ocorrências de cada categoria.
