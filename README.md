@@ -5,7 +5,6 @@ Nesta atividade iremos abordar três métodos de manipulação de arrays, são e
 ## map()
 
 O método `map()` executa uma função em todos os itens de um array. Seu objetivo é realizar uma determinada operação em cada elemento da lista.
-
 O `map()` retorna um novo array após a manipulação, ou seja, não altera o array original.
 
 Imaginemos que logo abaixo temos os preços de alguns produtos:
@@ -41,6 +40,5 @@ Resultado:
 `
 
 ## filter()
-
 O método filter() é utilizado quando queremos selecionar determinados elementos de um array de acordo com uma condição.
 
