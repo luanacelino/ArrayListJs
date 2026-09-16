@@ -27,6 +27,7 @@ O resultado será:
 `
 [51.75, 135.45, 84.75, 128.7]
 `
+
 Nesse exemplo, o map() percorreu cada preço da lista e multiplicou seu valor por 1.5. Dessa forma, cada produto teve seu preço aumentado em 50%.
 
 A lista original continua com os mesmos valores:
@@ -64,3 +65,7 @@ O resultado será:
 
 Nesse caso, o `filter()` percorre cada nota e verifica se ela é maior ou igual a 7. Quando a condição é verdadeira, a nota é adicionada ao novo array. Quando a condição é falsa, ela não é adicionada.
 Dessa forma, conseguimos separar somente as notas que atendem à condição que definimos.
+
+## reduce()
+
+
