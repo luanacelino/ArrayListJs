@@ -1,23 +1,46 @@
 # ArrayListJs
 
-Nesta atividade iremos abordar tres metodos de manipulação de arrays, são eles: `map()`, `filter` e `()reduce`. Esses metodos possuem sintaxe mais sucinta e legivel e nos permite traduzir em poucas linhas o que precisariamos fazer com outros metodos para laço de repetiçao, como o `forEach()` por exemplo. Vejamos agora a definiçao desses metodos logo abaixo e o tutorial.
+Nesta atividade iremos abordar três métodos de manipulação de arrays, são eles: `map()`, `filter()` e `reduce()`. Esses métodos possuem uma sintaxe mais sucinta e legível e nos permitem traduzir em poucas linhas o que precisaríamos fazer com outros métodos ou estruturas de repetição, como o `forEach()`, por exemplo. Vejamos agora a definição desses métodos e logo em seguida um tutorial de como utilizá-los.
 
-`map()`:  executa uma funçao em todos os itens de uma array. O método map() tem o objetivo de executar uma função em cada item de um array.
-O método map() retorna um novo array após a manipulação, ou seja, não sobrescreve o array original. Na realidade, todos os métodos que iremos aprender neste artigo retornam um novo array como resposta. Imaginemos que logo abaixo temos preços de alguns pordutos
+## map()
 
-`const preçoProduto = [34.5, 90.3, 56.5, 85.8];`
+O método `map()` executa uma função em todos os itens de um array. Seu objetivo é realizar uma determinada operação em cada elemento da lista.
 
-E queremos aumentar o preço deles criamos uma nova lista que vai receber a lista original com o `.map`
+O `map()` retorna um novo array após a manipulação, ou seja, não altera o array original.
 
+Imaginemos que logo abaixo temos os preços de alguns produtos:
+
+```javascript
+const preçoProduto = [34.5, 90.3, 56.5, 85.8];
 ```
-const novosPreços = preçoProduto.map(preco =>{
+
+E queremos aumentar o preço deles. Para isso, podemos criar uma nova lista que vai receber os valores da lista original após a aplicação do `map()`:
+
+```javascript
+const novosPreços = preçoProduto.map(preco => {
     return preco * 1.5;
-})
+});
 
 console.log(novosPreços);
 ```
 
+O resultado será:
+`
+[51.75, 135.45, 84.75, 128.7]
+`
+Nesse exemplo, o map() percorreu cada preço da lista e multiplicou seu valor por 1.5. Dessa forma, cada produto teve seu preço aumentado em 50%.
 
+A lista original continua com os mesmos valores:
+```javascript
+console.log(preçoProduto);
+```
 
+Resultado:
+`
+[34.5, 90.3, 56.5, 85.8]
+`
 
+## filter()
+
+O método filter() é utilizado quando queremos selecionar determinados elementos de um array de acordo com uma condição.
 
