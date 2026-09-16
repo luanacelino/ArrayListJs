@@ -46,3 +46,20 @@ Por exemplo, podemos ter uma lista contendo notas:
 ```javascript
 const notas = [5, 2, 3.5, 7, 8.5, 10, 9.4, 7.9, 9];
 ```
+
+Supondo que queremos obter somente as notas maiores ou iguais a 7, podemos utilizar o `filter()`:
+
+```javascript
+const notasAltas = notas.filter(nota => nota >= 7);
+
+console.log(notasAltas);
+```
+
+O resultado será:
+
+`
+[7, 8.5, 10, 9.4, 7.9, 9]
+`
+
+Nesse caso, o `filter()` percorre cada nota e verifica se ela é maior ou igual a 7. Quando a condição é verdadeira, a nota é adicionada ao novo array. Quando a condição é falsa, ela não é adicionada.
+Dessa forma, conseguimos separar somente as notas que atendem à condição que definimos.
