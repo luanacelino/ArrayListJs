@@ -9,6 +9,14 @@ O método map() retorna um novo array após a manipulação, ou seja, não sobre
 
 E queremos aumentar o preço deles criamos uma nova lista que vai receber a lista original com o `.map`
 
+```
+const novosPreços = preçoProduto.map(preco =>{
+    return preco * 1.5;
+})
+
+console.log(novosPreços);
+```
+
 
 
 
