@@ -133,6 +133,7 @@ Nesse exemplo, o acumulador começa como um objeto vazio:
 `
 {}
 `
+
 A cada produto que o reduce() encontra, ele verifica qual é a categoria desse produto.
 
 A expressão:
@@ -161,3 +162,52 @@ Ao final da execução, temos:
 ```
 
 Nesse exemplo, o acumulador está sendo utilizado como um objeto para armazenar a quantidade de ocorrências de cada categoria.
+
+## Utilizando os métodos juntos
+
+Além de utilizar `map()`, `filter()` e `reduce()` separadamente, também podemos utilizar os três em sequência.
+
+Por exemplo:
+
+```javascript
+const numeros = [1, 2, 3, 4, 5, 6];
+
+const resultado = numeros
+    .filter(numero => numero % 2 === 0)
+    .map(numero => numero * 2)
+    .reduce((acumulador, numero) => acumulador + numero, 0);
+
+console.log(resultado);
+```
+
+O resultado será:
+
+`
+24
+`
+
+Nesse exemplo, cada método realiza uma parte da operação.
+
+Primeiro, o `filter()` seleciona somente os números pares:
+
+`
+[2, 4, 6]
+`
+
+Depois, o `map()` dobra cada um desses valores:
+
+`
+[4, 8, 12]
+`
+
+Por último, o `reduce()` soma os valores:
+
+`
+4 + 8 + 12 = 24
+`
+
+Assim, o resultado final é `24`.
+
+## Conclusão
+
+O `map()` pode ser utilizado para transformar os elementos de uma lista, o `filter()` para selecionar elementos que atendam a uma determinada condição e o `reduce()` para acumular informações e gerar um resultado final.
